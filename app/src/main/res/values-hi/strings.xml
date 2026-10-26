@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">AgeWish</string>
+    <string name="app_tagline">उम्र निकालें। शुभकामनाएं भेजें।</string>
+
+    <!-- Bottom Nav -->
+    <string name="nav_age">उम्र गणक</string>
+    <string name="nav_date_diff">तिथि अंतर</string>
+    <string name="nav_date_plus">तिथि ± दिन</string>
+    <string name="nav_wish">बधाई कार्ड</string>
+    <string name="nav_history">इतिहास</string>
+
+    <!-- Menu -->
+    <string name="menu_share_app">ऐप साझा करें</string>
+    <string name="menu_rate_app">रेट करें</string>
+    <string name="menu_about">AgeWish के बारे में</string>
+
+    <!-- Tab 1: Age Calculator -->
+    <string name="title_age_calculator">उम्र गणक</string>
+    <string name="label_dob">जन्म तिथि (DOB)</string>
+    <string name="label_as_of_date">इस तिथि तक गणना करें</string>
+    <string name="label_anniversary_date">सालगिरह तिथि (वैकल्पिक)</string>
+    <string name="btn_calculate">गणना करें</string>
+    <string name="btn_generate_pdf">PDF बनाएं</string>
+    <string name="btn_save_downloads">डाउनलोड्स में सहेजें</string>
+    <string name="btn_share_image">छवि साझा करें</string>
+    <string name="btn_copy">क्लिपबोर्ड में कॉपी करें</string>
+    <string name="btn_clear_anniversary">सालगिरह हटाएं</string>
+
+    <string name="age_result_format">उम्र: %1$d वर्ष, %2$d महीने, %3$d दिन</string>
+    <string name="totals_format">कुल: %1$s दिन / %2$s सप्ताह / %3$s महीने / %4$s घंटे / %5$s मिनट</string>
+    <string name="next_birthday_format">अगला जन्मदिन: %1$d दिनों में (%2$s को)</string>
+    <string name="next_anniversary_format">अगली सालगिरह: %1$d दिनों में (%2$s को)</string>
+    <string name="zodiac_format">राशि: %1$s   चीनी राशि: %2$s</string>
+    <string name="born_on_format">जन्म वार: %1$s</string>
+
+    <string name="banner_bday_today">🎂 जन्मदिन की हार्दिक शुभकामनाएं! आपका दिन खुशियों से भरा हो! 🎉✨</string>
+    <string name="banner_bday_soon">🎉 आपका जन्मदिन %1$d दिनों में आ रहा है! जश्न की तैयारी करें!</string>
+    <string name="banner_anniversary_today">💍 सालगिरह मुबारक! आपके सफर में हमेशा प्यार बना रहे! ❤️🥂</string>
+
+    <!-- Tab 2: Date Difference -->
+    <string name="title_date_diff">तिथियों में अंतर</string>
+    <string name="label_start_date">प्रारंभिक तिथि</string>
+    <string name="label_end_date">अंतिम तिथि</string>
+    <string name="switch_include_end_day">अंतिम दिन शामिल करें (+1 दिन)</string>
+    <string name="switch_working_days">केवल कार्य दिवस गिनें (सोम-शुक्र)</string>
+    <string name="diff_result_format">अंतर: %1$d वर्ष, %2$d महीने, %3$d दिन</string>
+    <string name="diff_totals_format">कुल दिन: %1$d (सप्ताह: %2$d)</string>
+    <string name="working_days_format">कार्य दिवस: %1$d (शनिवार/रविवार छोड़कर)</string>
+
+    <!-- Tab 3: Date ± N Days -->
+    <string name="title_date_plus">तिथि ± दिन</string>
+    <string name="label_base_date">आधार तिथि</string>
+    <string name="label_days_count">दिनों की संख्या (जैसे 30, -15)</string>
+    <string name="label_months_count">महीनों की संख्या (जैसे 6, -3)</string>
+    <string name="switch_months_years_mode">महीने और वर्ष मोड</string>
+    <string name="result_date_format">परिणाम तिथि: %1$s (%2$s)</string>
+    <string name="result_months_format">परिणाम तिथि: %1$s (%2$s)</string>
+
+    <!-- Tab 4: Wish Cards -->
+    <string name="title_wish_cards">बधाई कार्ड निर्माता</string>
+    <string name="label_occasion">अवसर</string>
+    <string name="label_recipient_name">प्राप्तकर्ता का नाम *</string>
+    <string name="label_sender_name">प्रेषक का नाम (वैकल्पिक)</string>
+    <string name="label_custom_message">शुभकामना संदेश</string>
+    <string name="label_theme_color">कार्ड थीम चुनें</string>
+    <string name="btn_generate_wish_card">बधाई कार्ड बनाएं</string>
+    <string name="branding_footer">Made with AgeWish</string>
+    <string name="preview_card_title">कार्ड पूर्वावलोकन</string>
+
+    <!-- Occasions -->
+    <string name="occ_birthday">जन्मदिन</string>
+    <string name="occ_anniversary">सालगिरह</string>
+    <string name="occ_wedding">विवाह</string>
+    <string name="occ_new_year">नव वर्ष</string>
+    <string name="occ_diwali">दीपावली</string>
+    <string name="occ_eid">ईद</string>
+    <string name="occ_christmas">क्रिसमस</string>
+    <string name="occ_custom">कस्टम</string>
+
+    <!-- Tab 5: History -->
+    <string name="title_history">रिपोर्ट व बधाई इतिहास</string>
+    <string name="empty_history">अभी कोई रिपोर्ट नहीं है।\nकिसी भी टैब से रिपोर्ट बनाएं!</string>
+    <string name="dialog_delete_title">रिपोर्ट हटाएं</string>
+    <string name="dialog_delete_msg">क्या आप इस PDF रिपोर्ट को हटाना चाहते हैं?</string>
+    <string name="action_delete">हटाएं</string>
+    <string name="action_cancel">रद्द करें</string>
+
+    <!-- Dialogs & Feedback -->
+    <string name="rate_dialog_title">AgeWish पसंद आ रहा है?</string>
+    <string name="rate_dialog_message">यदि AgeWish आपके काम आ रहा है, तो कृपया Google Play पर 5 स्टार रेटिंग दें! आपका समर्थन ऐप को मुफ्त रखने में मदद करता है।</string>
+    <string name="btn_rate_now">अभी 5 स्टार दें</string>
+    <string name="btn_rate_later">बाद में</string>
+    <string name="btn_rate_no_thanks">नहीं, धन्यवाद</string>
+
+    <!-- Toast / Alerts -->
+    <string name="toast_copied">क्लिपबोर्ड पर कॉपी किया गया!</string>
+    <string name="toast_saved_downloads">डाउनलोड्स फोल्डर में सहेजा गया: %1$s</string>
+    <string name="toast_save_failed">डाउनलोड्स में सहेजने में विफल</string>
+    <string name="toast_enter_recipient">कृपया प्राप्तकर्ता का नाम दर्ज करें</string>
+    <string name="toast_dob_required">कृपया एक मान्य जन्म तिथि चुनें</string>
+    <string name="toast_start_end_order">प्रारंभिक तिथि अंतिम तिथि से पहले होनी चाहिए</string>
+    <string name="toast_deleted">रिपोर्ट हटा दी गई</string>
+
+    <!-- Share Strings -->
+    <string name="share_app_text">AgeWish ऐप देखें – उम्र गणना और सुंदर बधाई कार्ड बनाएं! डाउनलोड करें: https://play.google.com/store/apps/details?id=com.agewish.calculator</string>
+    <string name="share_pdf_title">AgeWish PDF साझा करें</string>
+    <string name="share_image_title">AgeWish छवि साझा करें</string>
+
+    <!-- PDF Document Defaults -->
+    <string name="pdf_header_title">AgeWish रिपोर्ट</string>
+    <string name="pdf_footer_note">AgeWish द्वारा निर्मित – उम्र निकालें। शुभकामनाएं भेजें।</string>
+</resources>

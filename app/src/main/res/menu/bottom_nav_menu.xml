@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_age"
+        android:icon="@drawable/ic_age"
+        android:title="@string/nav_age" />
+    <item
+        android:id="@+id/nav_date_diff"
+        android:icon="@drawable/ic_date_diff"
+        android:title="@string/nav_date_diff" />
+    <item
+        android:id="@+id/nav_date_plus"
+        android:icon="@drawable/ic_date_plus"
+        android:title="@string/nav_date_plus" />
+    <item
+        android:id="@+id/nav_wish"
+        android:icon="@drawable/ic_wish"
+        android:title="@string/nav_wish" />
+    <item
+        android:id="@+id/nav_history"
+        android:icon="@drawable/ic_history"
+        android:title="@string/nav_history" />
+</menu>

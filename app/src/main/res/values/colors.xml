@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Brand (Teal / Emerald / Coral accents) -->
+    <color name="md_theme_light_primary">#00695C</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#B2DFDB</color>
+    <color name="md_theme_light_onPrimaryContainer">#00201B</color>
+
+    <color name="md_theme_light_secondary">#4A6267</color>
+    <color name="md_theme_light_onSecondary">#FFFFFF</color>
+    <color name="md_theme_light_secondaryContainer">#CDE7EC</color>
+    <color name="md_theme_light_onSecondaryContainer">#051F23</color>
+
+    <color name="md_theme_light_tertiary">#E65100</color>
+    <color name="md_theme_light_onTertiary">#FFFFFF</color>
+    <color name="md_theme_light_tertiaryContainer">#FFDBCF</color>
+    <color name="md_theme_light_onTertiaryContainer">#380D00</color>
+
+    <color name="md_theme_light_error">#BA1A1A</color>
+    <color name="md_theme_light_onError">#FFFFFF</color>
+    <color name="md_theme_light_errorContainer">#FFDAD6</color>
+    <color name="md_theme_light_onErrorContainer">#410002</color>
+
+    <color name="md_theme_light_background">#F8FAF9</color>
+    <color name="md_theme_light_onBackground">#191C1C</color>
+    <color name="md_theme_light_surface">#FFFFFF</color>
+    <color name="md_theme_light_onSurface">#191C1C</color>
+    <color name="md_theme_light_surfaceVariant">#E0E5E3</color>
+    <color name="md_theme_light_onSurfaceVariant">#3F4947</color>
+    <color name="md_theme_light_outline">#6F7977</color>
+
+    <!-- Dark Theme -->
+    <color name="md_theme_dark_primary">#80CBC4</color>
+    <color name="md_theme_dark_onPrimary">#003831</color>
+    <color name="md_theme_dark_primaryContainer">#004F46</color>
+    <color name="md_theme_dark_onPrimaryContainer">#9EEFE6</color>
+
+    <color name="md_theme_dark_secondary">#B1CBD0</color>
+    <color name="md_theme_dark_onSecondary">#1C3439</color>
+    <color name="md_theme_dark_secondaryContainer">#334A4F</color>
+    <color name="md_theme_dark_onSecondaryContainer">#CDE7EC</color>
+
+    <color name="md_theme_dark_tertiary">#FFB59D</color>
+    <color name="md_theme_dark_onTertiary">#5F1600</color>
+    <color name="md_theme_dark_tertiaryContainer">#862300</color>
+    <color name="md_theme_dark_onTertiaryContainer">#FFDBCF</color>
+
+    <color name="md_theme_dark_error">#FFB4AB</color>
+    <color name="md_theme_dark_onError">#690005</color>
+    <color name="md_theme_dark_errorContainer">#93000A</color>
+    <color name="md_theme_dark_onErrorContainer">#FFDAD6</color>
+
+    <color name="md_theme_dark_background">#101414</color>
+    <color name="md_theme_dark_onBackground">#E1E3E2</color>
+    <color name="md_theme_dark_surface">#191C1C</color>
+    <color name="md_theme_dark_onSurface">#E1E3E2</color>
+    <color name="md_theme_dark_surfaceVariant">#3F4947</color>
+    <color name="md_theme_dark_onSurfaceVariant">#BFC9C7</color>
+    <color name="md_theme_dark_outline">#899391</color>
+
+    <!-- Accent Card & Wish Themes -->
+    <color name="card_birthday_start">#FF5252</color>
+    <color name="card_birthday_end">#FF7A00</color>
+    <color name="card_anniversary_start">#9C27B0</color>
+    <color name="card_anniversary_end">#E91E63</color>
+    <color name="card_wedding_start">#D4AF37</color>
+    <color name="card_wedding_end">#E5C158</color>
+    <color name="card_new_year_start">#1A237E</color>
+    <color name="card_new_year_end">#4A148C</color>
+    <color name="card_diwali_start">#FF6F00</color>
+    <color name="card_diwali_end">#FFB300</color>
+    <color name="card_eid_start">#004D40</color>
+    <color name="card_eid_end">#00897B</color>
+    <color name="card_christmas_start">#B71C1C</color>
+    <color name="card_christmas_end">#1B5E20</color>
+
+    <!-- Neutral and Surface -->
+    <color name="banner_bday_bg">#FFF3E0</color>
+    <color name="banner_bday_text">#E65100</color>
+    <color name="banner_anniv_bg">#FCE4EC</color>
+    <color name="banner_anniv_text">#880E4F</color>
+
+    <color name="splash_background">#004D40</color>
+</resources>

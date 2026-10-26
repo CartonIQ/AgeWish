@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_age">
+
+    <fragment
+        android:id="@+id/nav_age"
+        android:name="com.agewish.calculator.AgeFragment"
+        android:label="@string/title_age_calculator"
+        tools:layout="@layout/fragment_age" />
+
+    <fragment
+        android:id="@+id/nav_date_diff"
+        android:name="com.agewish.calculator.DateDiffFragment"
+        android:label="@string/title_date_diff"
+        tools:layout="@layout/fragment_date_diff" />
+
+    <fragment
+        android:id="@+id/nav_date_plus"
+        android:name="com.agewish.calculator.DatePlusFragment"
+        android:label="@string/title_date_plus"
+        tools:layout="@layout/fragment_date_plus" />
+
+    <fragment
+        android:id="@+id/nav_wish"
+        android:name="com.agewish.calculator.WishFragment"
+        android:label="@string/title_wish_cards"
+        tools:layout="@layout/fragment_wish" />
+
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="com.agewish.calculator.HistoryFragment"
+        android:label="@string/title_history"
+        tools:layout="@layout/fragment_history" />
+
+</navigation>

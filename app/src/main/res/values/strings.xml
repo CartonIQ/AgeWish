@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">AgeWish</string>
+    <string name="app_tagline">Calculate age. Send wishes.</string>
+
+    <!-- Bottom Nav -->
+    <string name="nav_age">Age</string>
+    <string name="nav_date_diff">Difference</string>
+    <string name="nav_date_plus">Date ± N</string>
+    <string name="nav_wish">Wish Cards</string>
+    <string name="nav_history">History</string>
+
+    <!-- Menu -->
+    <string name="menu_share_app">Share App</string>
+    <string name="menu_rate_app">Rate Us</string>
+    <string name="menu_about">About AgeWish</string>
+
+    <!-- Tab 1: Age Calculator -->
+    <string name="title_age_calculator">Age Calculator</string>
+    <string name="label_dob">Date of Birth</string>
+    <string name="label_as_of_date">Calculate As Of</string>
+    <string name="label_anniversary_date">Anniversary Date (Optional)</string>
+    <string name="btn_calculate">Calculate</string>
+    <string name="btn_generate_pdf">Generate PDF</string>
+    <string name="btn_save_downloads">Save to Downloads</string>
+    <string name="btn_share_image">Share as Image</string>
+    <string name="btn_copy">Copy to Clipboard</string>
+    <string name="btn_clear_anniversary">Clear Anniversary</string>
+
+    <string name="age_result_format">Age: %1$d years, %2$d months, %3$d days</string>
+    <string name="totals_format">Total: %1$s days / %2$s weeks / %3$s months / %4$s hours / %5$s minutes</string>
+    <string name="next_birthday_format">Next birthday in: %1$d days (on %2$s)</string>
+    <string name="next_anniversary_format">Next anniversary in: %1$d days (on %2$s)</string>
+    <string name="zodiac_format">Zodiac: %1$s   Chinese: %2$s</string>
+    <string name="born_on_format">Born on: %1$s</string>
+
+    <string name="banner_bday_today">🎂 Happy Birthday! May your day be filled with joy and laughter! 🎉✨</string>
+    <string name="banner_bday_soon">🎉 Your birthday is in %1$d days! Get ready to celebrate!</string>
+    <string name="banner_anniversary_today">💍 Happy Anniversary! Celebrating your beautiful journey together! ❤️🥂</string>
+
+    <!-- Tab 2: Date Difference -->
+    <string name="title_date_diff">Date Difference</string>
+    <string name="label_start_date">Start Date</string>
+    <string name="label_end_date">End Date</string>
+    <string name="switch_include_end_day">Include end day (+1 day)</string>
+    <string name="switch_working_days">Count working days only (Mon-Fri)</string>
+    <string name="diff_result_format">Difference: %1$d years, %2$d months, %3$d days</string>
+    <string name="diff_totals_format">Total days: %1$d (weeks: %2$d)</string>
+    <string name="working_days_format">Working days: %1$d (excluding Sat/Sun)</string>
+
+    <!-- Tab 3: Date ± N Days -->
+    <string name="title_date_plus">Date ± N Days</string>
+    <string name="label_base_date">Base Date</string>
+    <string name="label_days_count">Number of Days (e.g. 30, -15)</string>
+    <string name="label_months_count">Number of Months (e.g. 6, -3)</string>
+    <string name="switch_months_years_mode">Months &amp; Years Mode</string>
+    <string name="result_date_format">Result Date: %1$s (%2$s)</string>
+    <string name="result_months_format">Result Date: %1$s (%2$s)</string>
+
+    <!-- Tab 4: Wish Cards -->
+    <string name="title_wish_cards">Wish Card Maker</string>
+    <string name="label_occasion">Occasion</string>
+    <string name="label_recipient_name">Recipient Name *</string>
+    <string name="label_sender_name">Sender Name (Optional)</string>
+    <string name="label_custom_message">Greeting Message</string>
+    <string name="label_theme_color">Select Card Theme</string>
+    <string name="btn_generate_wish_card">Generate Wish Card</string>
+    <string name="branding_footer">Made with AgeWish</string>
+    <string name="preview_card_title">Card Preview</string>
+
+    <!-- Occasions -->
+    <string name="occ_birthday">Birthday</string>
+    <string name="occ_anniversary">Anniversary</string>
+    <string name="occ_wedding">Wedding</string>
+    <string name="occ_new_year">New Year</string>
+    <string name="occ_diwali">Diwali</string>
+    <string name="occ_eid">Eid</string>
+    <string name="occ_christmas">Christmas</string>
+    <string name="occ_custom">Custom</string>
+
+    <!-- Tab 5: History -->
+    <string name="title_history">Report &amp; Wish History</string>
+    <string name="empty_history">No reports yet.\nGenerate one from any tab!</string>
+    <string name="dialog_delete_title">Delete Report</string>
+    <string name="dialog_delete_msg">Are you sure you want to delete this PDF report?</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_cancel">Cancel</string>
+
+    <!-- Dialogs & Feedback -->
+    <string name="rate_dialog_title">Enjoying AgeWish?</string>
+    <string name="rate_dialog_message">If AgeWish has been helpful, please take a moment to rate us 5 stars on Google Play! Your support keeps the app free.</string>
+    <string name="btn_rate_now">Rate 5 Stars</string>
+    <string name="btn_rate_later">Later</string>
+    <string name="btn_rate_no_thanks">No, Thanks</string>
+
+    <!-- Toast / Alerts -->
+    <string name="toast_copied">Copied to clipboard!</string>
+    <string name="toast_saved_downloads">Saved to Downloads folder: %1$s</string>
+    <string name="toast_save_failed">Failed to save PDF to Downloads</string>
+    <string name="toast_enter_recipient">Please enter recipient name</string>
+    <string name="toast_dob_required">Please select a valid Date of Birth</string>
+    <string name="toast_start_end_order">Start date must be before or equal to end date</string>
+    <string name="toast_deleted">Report deleted</string>
+
+    <!-- Share Strings -->
+    <string name="share_app_text">Check out AgeWish – the ultimate Age Calculator &amp; Wish Card Maker! Download now: https://play.google.com/store/apps/details?id=com.agewish.calculator</string>
+    <string name="share_pdf_title">Share AgeWish PDF</string>
+    <string name="share_image_title">Share AgeWish Image</string>
+
+    <!-- PDF Document Defaults -->
+    <string name="pdf_header_title">AgeWish Report</string>
+    <string name="pdf_footer_note">Generated by AgeWish – Calculate age. Send wishes.</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <include domain="database" path="agewish_database" />
+        <include domain="sharedpref" path="agewish_prefs.xml" />
+        
+    </cloud-backup>
+    <device-transfer>
+        <include domain="database" path="agewish_database" />
+        <include domain="sharedpref" path="agewish_prefs.xml" />
+    </device-transfer>
+</data-extraction-rules>

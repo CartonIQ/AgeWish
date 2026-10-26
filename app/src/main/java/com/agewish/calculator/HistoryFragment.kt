@@ -1,0 +1,183 @@
+package com.agewish.calculator
+
+import android.os.Bundle
+import android.view.HapticFeedbackConstants
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
+import com.agewish.calculator.data.HistoryEntity
+import com.agewish.calculator.databinding.FragmentHistoryBinding
+import com.agewish.calculator.databinding.ItemHistoryBinding
+import com.agewish.calculator.pdf.PdfSharer
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import java.io.File
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+
+class HistoryFragment : Fragment() {
+
+    private var _binding: FragmentHistoryBinding? = null
+    private val binding get() = _binding!!
+    private lateinit var adapter: HistoryAdapter
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentHistoryBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val app = requireActivity().application as AgeWishApp
+        adapter = HistoryAdapter(
+            onItemClick = { entity ->
+                performHaptic()
+                val file = File(entity.filePath)
+                if (file.exists()) {
+                    PdfSharer.sharePdf(requireContext(), file)
+                } else {
+                    Toast.makeText(requireContext(), "File not found on device storage", Toast.LENGTH_SHORT).show()
+                }
+            },
+            onItemLongClick = { entity ->
+                performHaptic()
+                showDeleteDialog(entity, app)
+            }
+        )
+
+        binding.rvHistory.adapter = adapter
+
+        app.repository.allReports.observe(viewLifecycleOwner) { reports ->
+            if (reports.isNullOrEmpty()) {
+                binding.layoutEmpty.visibility = View.VISIBLE
+                binding.rvHistory.visibility = View.GONE
+            } else {
+                binding.layoutEmpty.visibility = View.GONE
+                binding.rvHistory.visibility = View.VISIBLE
+                adapter.submitList(reports)
+            }
+        }
+    }
+
+    private fun showDeleteDialog(entity: HistoryEntity, app: AgeWishApp) {
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(R.string.dialog_delete_title)
+            .setMessage(R.string.dialog_delete_msg)
+            .setPositiveButton(R.string.action_delete) { dialog, _ ->
+                performHaptic()
+                lifecycleScope.launch {
+                    app.repository.deleteReport(entity)
+                    Toast.makeText(requireContext(), R.string.toast_deleted, Toast.LENGTH_SHORT).show()
+                    dialog.dismiss()
+                }
+            }
+            .setNegativeButton(R.string.action_cancel) { dialog, _ ->
+                dialog.dismiss()
+            }
+            .show()
+    }
+
+    private fun performHaptic() {
+        view?.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    private class HistoryAdapter(
+        private val onItemClick: (HistoryEntity) -> Unit,
+        private val onItemLongClick: (HistoryEntity) -> Unit
+    ) : ListAdapter<HistoryEntity, HistoryViewHolder>(HistoryDiffCallback()) {
+
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistoryViewHolder {
+            val binding = ItemHistoryBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+            return HistoryViewHolder(binding, onItemClick, onItemLongClick)
+        }
+
+        override fun onBindViewHolder(holder: HistoryViewHolder, position: Int) {
+            holder.bind(getItem(position))
+        }
+    }
+
+    private class HistoryViewHolder(
+        private val binding: ItemHistoryBinding,
+        private val onItemClick: (HistoryEntity) -> Unit,
+        private val onItemLongClick: (HistoryEntity) -> Unit
+    ) : RecyclerView.ViewHolder(binding.root) {
+
+        private val dateFormat = SimpleDateFormat("MMM dd, yyyy • hh:mm a", Locale.getDefault())
+
+        fun bind(item: HistoryEntity) {
+            binding.tvHistorySummary.text = item.summary
+            binding.tvHistoryDate.text = dateFormat.format(Date(item.createdAt))
+
+            when (item.type) {
+                "AGE" -> {
+                    binding.tvHistoryType.text = "Age Calculator Report"
+                    binding.ivTypeIcon.setImageResource(R.drawable.ic_age)
+                    binding.ivTypeIcon.setBackgroundResource(R.drawable.bg_wish_card)
+                }
+                "DATE_DIFF" -> {
+                    binding.tvHistoryType.text = "Date Difference Report"
+                    binding.ivTypeIcon.setImageResource(R.drawable.ic_date_diff)
+                    binding.ivTypeIcon.setBackgroundResource(R.drawable.bg_wish_card)
+                }
+                "DATE_PLUS" -> {
+                    binding.tvHistoryType.text = "Date Math Report"
+                    binding.ivTypeIcon.setImageResource(R.drawable.ic_date_plus)
+                    binding.ivTypeIcon.setBackgroundResource(R.drawable.bg_wish_card)
+                }
+                "WISH" -> {
+                    binding.tvHistoryType.text = "Greeting Wish Card"
+                    binding.ivTypeIcon.setImageResource(R.drawable.ic_wish)
+                    binding.ivTypeIcon.setBackgroundResource(R.drawable.bg_birthday)
+                }
+                else -> {
+                    binding.tvHistoryType.text = "Report"
+                    binding.ivTypeIcon.setImageResource(R.drawable.ic_age)
+                }
+            }
+
+            binding.root.setOnClickListener {
+                onItemClick(item)
+            }
+
+            binding.root.setOnLongClickListener {
+                onItemLongClick(item)
+                true
+            }
+
+            binding.btnShareItem.setOnClickListener {
+                onItemClick(item)
+            }
+        }
+    }
+
+    private class HistoryDiffCallback : DiffUtil.ItemCallback<HistoryEntity>() {
+        override fun areItemsTheSame(oldItem: HistoryEntity, newItem: HistoryEntity): Boolean {
+            return oldItem.id == newItem.id
+        }
+
+        override fun areContentsTheSame(oldItem: HistoryEntity, newItem: HistoryEntity): Boolean {
+            return oldItem == newItem
+        }
+    }
+}
